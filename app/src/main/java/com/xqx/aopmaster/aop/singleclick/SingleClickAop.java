@@ -37,18 +37,20 @@ public class SingleClickAop {
                 view = (View) o;
             }
         }
-        Log.e("======", "======singleClick:" + singleClick);
+        Log.e("======", "======view:" + view + "--" + singleClick.clickIntervals());
         if (view != null) {
             Object tag = view.getTag(KEY);
             long lastClickTime = tag == null ? 0 : (long) tag;
             Log.d(TAG, "executionSingleClickAround: lastClickTime  " + lastClickTime + "   clickIntervals  " + singleClick.clickIntervals());
             long currentTime = Calendar.getInstance().getTimeInMillis();
+            Log.e("======", "======currentTime:" + currentTime + "--lastClickTime:" + lastClickTime + "--clickIntervals:" + singleClick.clickIntervals());
             if (currentTime - lastClickTime >= singleClick.clickIntervals()) {
                 view.setTag(KEY, currentTime);
                 Log.d(TAG, "executionSingleClickAround: currentTime  " + currentTime);
+                Log.e("======", "======singleClick22222:" + joinPoint.toShortString() + "--" + singleClick.clickIntervals());
                 joinPoint.proceed();
             }
         }
-        Log.e("======", "======singleClick22222:" + joinPoint.toShortString() + "--" + singleClick.clickIntervals());
+
     }
 }

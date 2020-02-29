@@ -29,19 +29,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == clickTest) {
-            clickTest();
+            clickTest(v);
         } else if (v == loginTest) {
-            loginTest();
+            loginTest(v);
         }
     }
 
     @MyAnnatation(clickIntervals = 800)
-    private void clickTest() {
+    public void clickTest(View v) {
         Log.e("======", "======click");
     }
 
     @CheckLoginImpl
-    private void loginTest() {
+    public void loginTest(View v) {
         Log.e("======", "====== loginTest");
     }
 }
