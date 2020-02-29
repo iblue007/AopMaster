@@ -1,4 +1,4 @@
-package com.xqx.aopmaster;
+package com.xqx.aopmaster.aop.singleclick;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

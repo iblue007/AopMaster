@@ -1,7 +1,9 @@
-package com.xqx.aopmaster;
+package com.xqx.aopmaster.aop.singleclick;
 
 import android.util.Log;
 import android.view.View;
+
+import com.xqx.aopmaster.R;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -17,9 +19,9 @@ import java.util.Calendar;
 public class SingleClickAop {
 
     static final String TAG = SingleClickAop.class.getName();
-    static final int KEY = R.id.testTv;
+    static final int KEY = R.id.click_test_tv;
 
-    @Pointcut("execution(@ com.xqx.aopmaster.MyAnnatation * *(..))")
+    @Pointcut("execution(@ com.xqx.aopmaster.aop.singleclick.MyAnnatation * *(..))")
     public void executionSingleClick() {
 
     }

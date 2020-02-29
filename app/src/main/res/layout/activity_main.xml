@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/testTv"
+        android:id="@+id/click_test_tv"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="#ccc"
         android:gravity="center"
-        android:text="Hello World!" />
+        android:text="防止重复点击测试" />
 
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/login_test_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#ccc"
+        android:gravity="center"
+        android:text="是否登录点击测试" />
+
+</LinearLayout>
