@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">AopMaster</string>
+    <string name="app_name">Aop实例集合</string>
+
+    <string name="corelib_permission_tip_str">为保证您正常、安全地使用App，请允许获取相关权限，否则将影响部分功能的正常使用。</string>
+    <string name="corelib_permission_tip_submit">去允许</string>
+
 </resources>

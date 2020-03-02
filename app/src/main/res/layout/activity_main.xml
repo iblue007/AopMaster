@@ -25,4 +25,14 @@
         android:gravity="center"
         android:text="是否登录点击测试" />
 
+
+    <TextView
+        android:id="@+id/login_permission_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#ccc"
+        android:gravity="center"
+        android:text="请求权限点击测试" />
+
 </LinearLayout>
