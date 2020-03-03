@@ -42,7 +42,7 @@ public class PermissionAspect {
         }
         if (context == null || needPermission == null) return;
      //   LogUtils.e("======", "======" + needPermission.toString());
-        RequestPermissionUtil.requestPermissions(context, needPermission.value(), new RequestPermissionCallBack() {
+        RequestPermissionUtil.requestPermissions(context,true, needPermission.value(), new RequestPermissionCallBack() {
             @Override
             public void granted() {
                 try {

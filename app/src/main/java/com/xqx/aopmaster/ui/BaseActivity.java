@@ -18,7 +18,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         LogUtils.e("======", "======requestCode:" + requestCode + "----grantResults:" + grantResults.toString());
         if (requestCode == RequestPermissionUtil.mRequestCode) {
-            RequestPermissionUtil.requestPermissions(this, permissions, new RequestPermissionCallBack() {
+            RequestPermissionUtil.requestPermissions(this, false, permissions, new RequestPermissionCallBack() {
                 @Override
                 public void granted() {
                     requestPermissionTest();
@@ -33,6 +33,5 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void requestPermissionTest() {
-
     }
 }

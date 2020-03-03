@@ -26,7 +26,7 @@ public class RequestPermissionUtil {
      * @param permissions
      * @param mRequestPermissionCallBack
      */
-    public static void requestPermissions(final Context context, final String[] permissions,
+    public static void requestPermissions(final Context context, boolean forceRequest, final String[] permissions,
                                           RequestPermissionCallBack mRequestPermissionCallBack) {
         StringBuilder permissionNames = new StringBuilder();
         for (String s : permissions) {
@@ -48,7 +48,9 @@ public class RequestPermissionUtil {
                         }
                     });
                 } else {
-                    ActivityCompat.requestPermissions(((Activity) context), permissions, mRequestCode);
+                    if (forceRequest) {
+                        ActivityCompat.requestPermissions(((Activity) context), permissions, mRequestCode);
+                    }
                 }
                 break;
             }
